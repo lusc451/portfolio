@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "banco-dashboard",
+    "title": "Banco Dashboard",
+    "description": "Dashboard interativo para dados financeiros e performance de investimentos.",
+    "tags": ["React", "D3.js", "Python"],
+    "image": "assets/img/projects/banco-dashboard/cover.jpg",
+    "repo_url": "#",
+    "live_url": "#"
+  },
+  {
+    "slug": "geo-pandas",
+    "title": "Geo-Pandas",
+    "description": "Análise geoespacial de furtos de celulares em SP com mapas interativos.",
+    "tags": ["Python", "Pandas", "GeoPandas"],
+    "image": "assets/img/projects/geo-pandas/cover.jpg",
+    "repo_url": "#",
+    "live_url": "#"
+  },
+  {
+    "slug": "appfilmes",
+    "title": "appFilmes",
+    "description": "App mobile em React Native consumindo API pública de filmes.",
+    "tags": ["React Native", "API REST", "Firebase"],
+    "image": "assets/img/projects/appfilmes/cover.jpg",
+    "repo_url": "#",
+    "live_url": "#"
+  },
+  {
+    "slug": "retail-vision-age",
+    "title": "Retail Vision Age",
+    "description": "Visão computacional + ML para classificação de faixa etária e dados demográficos.",
+    "tags": ["Node.js", "PostgreSQL", "YOLO"],
+    "image": "assets/img/projects/retail-vision-age/cover.jpg",
+    "repo_url": "#",
+    "live_url": "#"
+  }
+]

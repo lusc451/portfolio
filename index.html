@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Lucas Antunes - Desenvolvedor Fullstack &amp; Analista de Dados</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Montserrat:wght@400;500&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes slide-up-fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      animation: slide-up-fade-in both;
+      animation-timeline: view();
+      animation-range-start: entry 10%;
+      animation-range-end: cover 30%;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8B5CF6",
+            "secondary": "#4ADE80",
+            "background-light": "#f5f5f8",
+            "background-dark": "#111827",
+            "text-primary": "#F9FAFB",
+            "text-secondary": "#9CA3AF"
+          },
+          fontFamily: {
+            "display": ["Poppins", "sans-serif"],
+            "body": ["Montserrat", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+          boxShadow: {
+            'glow-primary': '0 0 15px rgba(139, 92, 246, 0.5)',
+            'glow-secondary': '0 0 15px rgba(74, 222, 128, 0.5)'
+          }
+        },
+      },
+    }
+  </script>
+</head>
+
+<!-- antes do </body> -->
+<script src="src/js/projects.js"></script>
+
+<body class="bg-background-dark text-text-primary font-body">
+  <div class="relative w-full min-h-screen overflow-x-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+      <div
+        class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(139,92,246,0.8),rgba(255,255,255,0))]">
+      </div>
+      <div
+        class="absolute bottom-[-10%] right-[-20%] top-0 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(74,222,128,0.8),rgba(255,255,255,0))]">
+      </div>
+    </div>
+    <div class="relative z-10 flex flex-col items-center w-full">
+      <div class="w-full max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+        <header class="sticky top-0 z-50 flex items-center justify-between py-5 bg-background-dark/80 backdrop-blur-sm">
+          <div class="flex items-center gap-3">
+            <div class="p-2 rounded-full bg-primary/20 text-primary">
+              <span class="material-symbols-outlined">
+                data_object
+              </span>
+            </div>
+            <h2 class="text-lg font-bold text-text-primary font-display">Lucas Antunes</h2>
+          </div>
+          <nav class="items-center hidden gap-8 md:flex">
+            <a class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"
+              href="#about">Sobre</a>
+            <a class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"
+              href="#projects">Projetos</a>
+            <a class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"
+              href="#contact">Contato</a>
+          </nav>
+        </header>
+        <main class="flex flex-col gap-24 py-16 md:gap-32 md:py-24">
+          <section class="flex flex-col items-center text-center">
+            <div class="flex flex-col gap-6">
+              <h1 class="text-4xl font-bold leading-tight tracking-tighter text-text-primary md:text-6xl font-display">
+                Transformo dados e código em soluções inteligentes
+              </h1>
+              <h2
+                class="max-w-3xl mx-auto text-base font-normal leading-normal text-text-secondary md:text-lg font-body">
+                Sou um Freelancer de Análise de Dados e Desenvolvedor Web &amp; Mobile Fullstack, apaixonado por
+                construir soluções inovadoras e eficientes a partir de dados complexos e código limpo.
+              </h2>
+              <div class="flex-wrap justify-center gap-4 flex mt-4">
+                <a class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-gradient-to-r from-primary to-secondary text-white text-base font-bold leading-normal tracking-wide transition-all duration-300 bg-size-200 bg-pos-0 hover:bg-pos-100"
+                  href="#projects">
+                  <span class="truncate">Ver Projetos</span>
+                </a>
+                <a class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/10 text-white text-base font-bold leading-normal tracking-wide transition-colors hover:bg-white/20"
+                  href="#contact">
+                  <span class="truncate">Entrar em Contato</span>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-8 animate-on-scroll" id="about">
+            <h3 class="text-2xl font-bold text-center text-text-primary md:text-3xl font-display">Sobre Mim</h3>
+            <p class="max-w-3xl mx-auto text-base leading-relaxed text-center text-text-secondary font-body">
+              Com experiência em análise de dados e desenvolvimento fullstack, meu objetivo é criar produtos digitais
+              que não apenas funcionem bem, mas que também forneçam insights valiosos e uma experiência de usuário
+              excepcional. Tenho um forte background em tecnologias como Python, Node.js e React.
+            </p>
+            <div class="flex items-center justify-center w-full py-6 mt-4 border-t border-b border-white/10">
+              <div class="flex flex-wrap justify-center gap-6">
+                <div class="flex items-center gap-2 p-2 text-text-secondary font-body" title="Python"> <span
+                    class="material-symbols-outlined">code</span> Python </div>
+                <div class="flex items-center gap-2 p-2 text-text-secondary font-body" title="Node.js"> <span
+                    class="material-symbols-outlined">javascript</span> Node.js </div>
+                <div class="flex items-center gap-2 p-2 text-text-secondary font-body" title="React"> <span
+                    class="material-symbols-outlined">javascript</span> React </div>
+                <div class="flex items-center gap-2 p-2 text-text-secondary font-body" title="Database"> <span
+                    class="material-symbols-outlined">database</span> SQL </div>
+                <div class="flex items-center gap-2 p-2 text-text-secondary font-body" title="Mobile"> <span
+                    class="material-symbols-outlined">smartphone</span> Mobile </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col items-center gap-12 animate-on-scroll">
+            <h3 class="text-2xl font-bold text-center text-text-primary md:text-3xl font-display">Stacks e Tecnologias
+            </h3>
+            <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="p-6 transition-colors border rounded-lg bg-white/5 border-white/10">
+                <h4 class="mb-4 text-lg font-semibold text-text-primary font-display">Frontend</h4>
+                <div class="flex flex-wrap font-body gap-x-4 gap-y-2 text-text-secondary"><span
+                    class="transition-colors hover:text-text-primary">React</span> <span
+                    class="transition-colors hover:text-text-primary">Next.js</span> <span
+                    class="transition-colors hover:text-text-primary">Tailwind CSS</span> <span
+                    class="transition-colors hover:text-text-primary">HTML5</span> <span
+                    class="transition-colors hover:text-text-primary">CSS3</span></div>
+              </div>
+              <div class="p-6 transition-colors border rounded-lg bg-white/5 border-white/10">
+                <h4 class="mb-4 text-lg font-semibold text-text-primary font-display">Backend</h4>
+                <div class="flex flex-wrap font-body gap-x-4 gap-y-2 text-text-secondary"><span
+                    class="transition-colors hover:text-text-primary">Node.js</span> <span
+                    class="transition-colors hover:text-text-primary">Express</span> <span
+                    class="transition-colors hover:text-text-primary">Python</span> <span
+                    class="transition-colors hover:text-text-primary">Flask</span> <span
+                    class="transition-colors hover:text-text-primary">REST APIs</span></div>
+              </div>
+              <div class="p-6 transition-colors border rounded-lg bg-white/5 border-white/10">
+                <h4 class="mb-4 text-lg font-semibold text-text-primary font-display">Análise de Dados</h4>
+                <div class="flex flex-wrap font-body gap-x-4 gap-y-2 text-text-secondary"><span
+                    class="transition-colors hover:text-text-primary">Pandas</span> <span
+                    class="transition-colors hover:text-text-primary">NumPy</span> <span
+                    class="transition-colors hover:text-text-primary">Matplotlib</span> <span
+                    class="transition-colors hover:text-text-primary">Scikit-learn</span> <span
+                    class="transition-colors hover:text-text-primary">SQL</span></div>
+              </div>
+              <div class="p-6 transition-colors border rounded-lg bg-white/5 border-white/10">
+                <h4 class="mb-4 text-lg font-semibold text-text-primary font-display">Databases</h4>
+                <div class="flex flex-wrap font-body gap-x-4 gap-y-2 text-text-secondary"><span
+                    class="transition-colors hover:text-text-primary">PostgreSQL</span> <span
+                    class="transition-colors hover:text-text-primary">MongoDB</span> <span
+                    class="transition-colors hover:text-text-primary">Firebase</span> <span
+                    class="transition-colors hover:text-text-primary">SQLite</span></div>
+              </div>
+              <div class="p-6 transition-colors border rounded-lg bg-white/5 border-white/10">
+                <h4 class="mb-4 text-lg font-semibold text-text-primary font-display">Mobile</h4>
+                <div class="flex flex-wrap font-body gap-x-4 gap-y-2 text-text-secondary"><span
+                    class="transition-colors hover:text-text-primary">React Native</span> <span
+                    class="transition-colors hover:text-text-primary">Flutter</span> <span
+                    class="transition-colors hover:text-text-primary">Swift</span></div>
+              </div>
+              <div class="p-6 transition-colors border rounded-lg bg-white/5 border-white/10">
+                <h4 class="mb-4 text-lg font-semibold text-text-primary font-display">Ferramentas</h4>
+                <div class="flex flex-wrap font-body gap-x-4 gap-y-2 text-text-secondary"><span
+                    class="transition-colors hover:text-text-primary">Git</span> <span
+                    class="transition-colors hover:text-text-primary">Docker</span> <span
+                    class="transition-colors hover:text-text-primary">Jupyter</span> <span
+                    class="transition-colors hover:text-text-primary">VS Code</span></div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col items-center gap-12 animate-on-scroll" id="projects">
+            <h3 class="text-2xl font-bold text-center text-text-primary md:text-3xl font-display">
+              Projetos em Destaque
+            </h3>
+
+            <div id="projects-grid" class="grid w-full grid-cols-1 gap-8 md:grid-cols-2"></div>
+          </section>
+          <section class="flex flex-col items-center gap-12 animate-on-scroll">
+            <h3 class="text-2xl font-bold text-center text-text-primary md:text-3xl font-display">Metodologia de
+              Trabalho</h3>
+            <div class="relative w-full">
+              <div class="absolute top-1/2 left-0 w-full h-0.5 bg-white/10 -translate-y-1/2"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center gap-2 text-center w-1/4">
+                  <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white"><span
+                      class="material-symbols-outlined">checklist</span></div>
+                  <h4 class="mt-2 text-sm font-semibold font-display">Planejamento</h4>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-center w-1/4">
+                  <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white"><span
+                      class="material-symbols-outlined">terminal</span></div>
+                  <h4 class="mt-2 text-sm font-semibold font-display">Desenvolvimento</h4>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-center w-1/4">
+                  <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white"><span
+                      class="material-symbols-outlined">rocket_launch</span></div>
+                  <h4 class="mt-2 text-sm font-semibold font-display">Deploy</h4>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-center w-1/4">
+                  <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white"><span
+                      class="material-symbols-outlined">monitoring</span></div>
+                  <h4 class="mt-2 text-sm font-semibold font-display">Resultados</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col items-center gap-6 text-center animate-on-scroll" id="contact">
+            <h3 class="text-2xl font-bold text-text-primary md:text-3xl font-display">Vamos Conversar?</h3>
+            <p class="max-w-xl text-base text-text-secondary font-body">Estou sempre aberto a novas oportunidades e
+              colaborações. Sinta-se à vontade para entrar em contato.</p>
+            <div class="flex items-center gap-6 mt-4">
+              <a aria-label="GitHub"
+                class="p-3 transition-colors rounded-full text-text-secondary bg-white/10 hover:bg-white/20 hover:text-text-primary"
+                href="#">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </a>
+              <a aria-label="LinkedIn"
+                class="p-3 transition-colors rounded-full text-text-secondary bg-white/10 hover:bg-white/20 hover:text-text-primary"
+                href="#">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                  </path>
+                </svg>
+              </a>
+              <a aria-label="Email"
+                class="p-3 transition-colors rounded-full text-text-secondary bg-white/10 hover:bg-white/20 hover:text-text-primary"
+                href="mailto:contato@lucas.dev">
+                <span class="material-symbols-outlined">mail</span>
+              </a>
+            </div>
+          </section>
+        </main>
+        <footer class="py-6 mt-16 text-center border-t border-white/10">
+          <p class="text-sm text-text-secondary font-body">© 2025 — Desenvolvido por Lucas Antunes</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

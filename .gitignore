@@ -1,0 +1,16 @@
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+*.code-workspace
+
+# builds/cache
+dist/
+.tmp/
+.cache/
+
+# logs
+*.log
+
+# Node (se futuramente usar tooling)
+node_modules/
