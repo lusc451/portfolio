@@ -9,7 +9,7 @@ async function loadProjects() {
 
     const toneByIndex = (i) => (i % 2 === 0 ? 'primary' : 'secondary');
 
-    grid.innerHTML = projects.map((p, i) => {
+    const card = (p, i) => {
       const tone = toneByIndex(i);
       const hoverShadow = tone === 'primary' ? 'hover:shadow-glow-primary' : 'hover:shadow-glow-secondary';
       const hoverRing   = tone === 'primary' ? 'group-hover:border-primary' : 'group-hover:border-secondary';
@@ -17,8 +17,13 @@ async function loadProjects() {
         ? 'rgba(139, 92, 246, 0.1)'
         : 'rgba(74, 222, 128, 0.1)';
 
-      const repoLink = p.repo_url ? `<a class="inline-flex items-center mt-4 text-sm font-semibold transition-colors text-secondary hover:brightness-125" href="${p.repo_url}" target="_blank" rel="noopener">Ver no GitHub <span class="ml-1 material-symbols-outlined">arrow_forward</span></a>` : '';
-      const liveLink = p.live_url ? `<a class="inline-flex items-center mt-4 text-sm font-semibold transition-colors text-secondary hover:brightness-125" href="${p.live_url}" target="_blank" rel="noopener">Ver Demo <span class="ml-1 material-symbols-outlined">open_in_new</span></a>` : '';
+      const img = p.image && p.image.length ? p.image : 'assets/img/projects/placeholder.jpg';
+      const repoLink = p.repo_url
+        ? `<a class="inline-flex items-center mt-4 text-sm font-semibold transition-colors text-secondary hover:brightness-125" href="${p.repo_url}" target="_blank" rel="noopener">Ver no GitHub <span class="ml-1 material-symbols-outlined">arrow_forward</span></a>`
+        : '';
+      const liveLink = p.live_url
+        ? `<a class="inline-flex items-center mt-4 text-sm font-semibold transition-colors text-secondary hover:brightness-125" href="${p.live_url}" target="_blank" rel="noopener">Ver Demo <span class="ml-1 material-symbols-outlined">open_in_new</span></a>`
+        : '';
 
       return `
         <div class="relative flex flex-col overflow-hidden transition-all duration-300 transform border rounded-lg group bg-white/5 border-white/10 hover:-translate-y-1 ${hoverShadow}">
@@ -28,7 +33,7 @@ async function loadProjects() {
 
           <div class="relative z-10 flex flex-col flex-grow">
             <div class="w-full h-48 bg-center bg-cover" role="img" aria-label="${p.title} cover"
-                 style="background-image: url('${p.image}')"></div>
+                 style="background-image: url('${img}')"></div>
 
             <div class="flex flex-col flex-grow gap-4 p-6">
               <h4 class="text-xl font-semibold text-text-primary font-display">${p.title}</h4>
@@ -46,7 +51,9 @@ async function loadProjects() {
           </div>
         </div>
       `;
-    }).join('');
+    };
+
+    grid.innerHTML = projects.map(card).join('');
   } catch (e) {
     console.error('Erro ao carregar projetos:', e);
     const grid = document.getElementById('projects-grid');
