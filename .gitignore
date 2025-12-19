@@ -14,3 +14,4 @@ dist/
 
 # Node (se futuramente usar tooling)
 node_modules/
+.vercel

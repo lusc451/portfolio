@@ -2,36 +2,36 @@
   {
     "slug": "banco-dashboard",
     "title": "Banco Dashboard",
-    "description": "Dashboard interativo para dados financeiros.",
+    "description": "Dashboard interativo para visualização de dados financeiros e performance de investimentos.",
     "tags": ["React", "D3.js", "Python"],
-    "image": "assets/img/projects/banco-dashboard/profile.jpg",
+    "image": "assets/img/projects/banco-dashboard/cover.jpg",
     "repo_url": "https://github.com/seuuser/banco_dashboard",
     "live_url": ""
   },
   {
     "slug": "geo-pandas",
     "title": "Geo-Pandas",
-    "description": "Mapas interativos com dados de furtos em SP.",
+    "description": "Análise geoespacial com mapas e bibliotecas Python.",
     "tags": ["Python", "Pandas", "GeoPandas"],
-    "image": "assets/img/projects/geo-pandas/profile.jpg",
+    "image": "assets/img/projects/geo-pandas/cover.jpg",
     "repo_url": "https://github.com/seuuser/Geo-Pandas",
     "live_url": ""
   },
   {
     "slug": "appfilmes",
     "title": "appFilmes",
-    "description": "App React Native que lista filmes via API pública.",
+    "description": "App mobile em React Native que consome API pública de filmes.",
     "tags": ["React Native", "API REST", "Firebase"],
-    "image": "assets/img/projects/appfilmes/profile.jpg",
+    "image": "assets/img/projects/appfilmes/cover.jpg",
     "repo_url": "https://github.com/seuuser/appFilmes",
     "live_url": ""
   },
   {
     "slug": "retail-vision-age",
     "title": "Retail Vision Age",
-    "description": "Visão computacional + ML para faixa etária em tempo real.",
-    "tags": ["Node.js", "PostgreSQL", "YOLO"],
-    "image": "assets/img/projects/retail-vision-age/profile.jpg",
+    "description": "Visão computacional + ML para insights de varejo em tempo real.",
+    "tags": ["Node.js", "PostgreSQL", "Next.js"],
+    "image": "assets/img/projects/retail-vision-age/cover.jpg",
     "repo_url": "https://github.com/seuuser/retail-vision-age",
     "live_url": ""
   }
